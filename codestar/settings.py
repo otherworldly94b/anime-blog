@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'anime_blog',
     'django_summernote',
     'about',
+    'anime_review',
 ]
 
 SITE_ID = 1
