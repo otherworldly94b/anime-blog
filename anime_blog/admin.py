@@ -5,7 +5,7 @@ from .models import Post, Comment
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
-    Lists fields for display in admin, fileds for search,
+    Lists fields for display in admin, field for search,
     field filters, fields to prepopulate and rich-text editor.
     """
 

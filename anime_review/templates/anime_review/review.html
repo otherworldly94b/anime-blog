@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- review.html content starts here -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for anime in anime_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in anime.featured_image.url %}
+                                <img class="card-img-top" src="{% static 'images/anime_default.jpg' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ anime.anime_default.jpg }}" alt="{{ anime.title }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ anime.author }}</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'anime_detail' anime.slug %}" class="post-link">
+                                <h2 class="card-title">{{ anime.title }}</h2>
+                                <p class="card-text">{{ anime.excerpt }}</p>
+                            </a>
+
+                            <hr />
+                            <p class="card-text text-muted h6">{{ anime.created_on}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+<!-- review.html content ends here -->
+{% endblock %}
+
+{% block copyright %}
+Copyright 2024 Andreas Charalambous
+{% endblock %}
