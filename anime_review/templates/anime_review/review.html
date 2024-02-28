@@ -15,11 +15,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in anime.featured_image.url %}
+                                {% if "placeholder" in anime.anime_cover.url %}
                                 <img class="card-img-top" src="{% static 'images/anime_default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ anime.anime_default.jpg }}" alt="{{ anime.title }}">
+                                <img class="card-img-top" src=" {{ anime.anime_cover.url }}" alt="{{ anime.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ anime.author }}</p>

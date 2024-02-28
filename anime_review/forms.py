@@ -6,4 +6,4 @@ class AnimeReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ["author","stars","body"]
+        fields = ["stars","body"]

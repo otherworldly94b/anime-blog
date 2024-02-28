@@ -12,7 +12,7 @@ class AnimeList(generic.ListView):
     paginate_by = 6
 
 
-def anime_detail(request, ):
+def anime_detail(request, slug):
     
     queryset = Anime.objects.filter(status=1)
     anime = get_object_or_404(queryset, slug=slug)
@@ -45,3 +45,35 @@ def anime_detail(request, ):
             "anime_review_form": anime_review_form,
         },
     ) 
+    
+    
+def review_edit(request, slug, review_id):
+    """
+    Display an individual review for edit.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`anime_review.Anime`.
+    ``review``
+        A single review related to the anime.
+    ``review_form``
+        An instance of :form:`anime_review.AnimeReviewForm`
+    """
+    if request.method == "POST":
+
+        queryset = Anime.objects.filter(status=1)
+        anime = get_object_or_404(queryset, slug=slug)
+        review = get_object_or_404(Review, pk=review_id)
+        anime_review_form = AnimeReviewForm(data=request.POST, instance=review)
+
+        if anime_review_form.is_valid() and review.author == request.user:
+            review = anime_review_form.save(commit=False)
+            review.anime = anime
+            review.approved = False
+            review.save()
+            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating review!')
+
+    return HttpResponseRedirect(reverse('anime_detail', args=[slug]))
