@@ -1,110 +1,72 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Django Anime Blog
 
-Welcome otherworldly94b,
+This project is a Django-based web application for anime enthusiasts to share their thoughts and experiences.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Content Management:
+- Admin/Owner can post blog entries and reviews for anime they've seen (Screenshot Here).
+- Registered users can leave comments on blog posts and reviews (Screenshot Here).
 
-## Gitpod Reminders
+### User Management:
+- User registration, login, and logout functionality (Screenshot Here).
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Interactions:
+- Users can edit and delete their own comments and reviews (Screenshot Here).
+- Confirmation modal appears before deletion for safety (Screenshot Here).
 
-`python3 -m http.server`
+### Informational Pages:
+- Dedicated "About Me" page for the blog owner (Screenshot Here).
 
-A blue button should appear to click: _Make Public_,
+### Design:
+- The color scheme is inspired by a specific anime image featuring a group of heroes (Image Here).
 
-Another blue button should appear to click: _Open Browser_.
+## Technologies Used
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- **Backend:** Python, Django Framework
+- **Frontend:** HTML, CSS, Javascript
+- **Testing:** Lighthouse ![Insert Lighthouse Screenshot Here], Pep8 ![Insert Pep8 Screenshot Here], JSHint ![Insert JSHint Screenshot Here] (and more)
 
-A blue button should appear to click: _Make Public_,
+## Testing
 
-Another blue button should appear to click: _Open Browser_.
+The application has undergone a rigorous testing process:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Automated Testing:** Unit tests were written to ensure core functionalities work as expected.
+- **Manual Testing:** Extensive manual testing involved clicking through all functionalities, verifying form submissions, and confirming page loads.
+- **Additional Manual Testing:**
+  - Test if registration email is sent successfully.
+  - Try logging in with invalid credentials.
+  - Verify Edit/Delete functionality for blog post comments and anime reviews.
+  - Test image uploads for blog posts and anime entries.
+  - Check if pagination works correctly on listings.
 
-To log into the Heroku toolbelt CLI:
+## Deployment
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+This project can be deployed on various cloud platforms. Here are specific instructions for deploying on Heroku:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+1. **Heroku Setup:** Create a Heroku account and install the Heroku CLI following their instructions [Heroku Documentation Link](https://devcenter.heroku.com/).
+2. **Git Integration:** Initialize a Git repository in your project directory and push your code to Heroku. Refer to the Heroku documentation for details [Heroku Git Deployment Guide](https://devcenter.heroku.com/articles/deploying-python).
+3. **Requirements:** Create a `requirements.txt` file listing all your project dependencies. Heroku will install them automatically during deployment.
+4. **Configuration:** Set environment variables for any sensitive information like database credentials. Heroku provides ways to manage these securely.
+5. **Procfile:** Create a `Procfile` file specifying the command to run your Django application. A simple example: `web: gunicorn myproject.wsgi:application --log-file -`.
+6. **Deploy:** Once everything is set up, run `heroku deploy` to deploy your application to Heroku.
 
-------
+**Note:** These are general guidelines. Refer to Heroku's documentation for the latest and most accurate instructions.
 
-## Release History
+## Credits
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Code snippets and functionalities from [External Source 1 Link Here] and [External Source 2 Link Here] (if applicable).
+- Icon set used: [Link to Icon Set License Here] (if applicable).
+- Inspiration for color scheme: [Anime Image Source Link Here].
 
-**September 20 2023:** Update Python version to 3.9.17.
+**Please note:**
+- Replace bracketed text with actual links and screenshots.
+- Add any additional credits for code or resources used.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Future Development Plans
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- **Social Media Login:** Integrate with social media platforms like Facebook, Twitter, or Google for user registration and login (as mentioned). This can streamline the registration process and potentially attract a wider user base.
+- **Advanced Search:** Implement a more advanced search functionality that allows users to filter blog posts and anime entries by genre, release date, or other relevant criteria.
+- **User Recommendations:** Develop a recommendation system that suggests anime or blog posts to users based on their past viewing habits and comments. This can enhance user engagement and discovery of new content.
+- **Community Features:** Consider adding features like forums or chat rooms to foster a stronger sense of community among users. This can allow them to discuss anime, share recommendations, and interact directly.
+- **Mobile App:** Develop a mobile application for the blog, allowing users to access content and interact on the go. This can significantly increase accessibility and user engagement.

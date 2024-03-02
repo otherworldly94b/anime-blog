@@ -63,7 +63,7 @@
                             {{ review.created_on }}
                         </span> wrote:
                     </p>
-                    <div>
+                    <div id="starRatingId{{ review.id }}">
                         {{ review.stars | linebreaks }}
                     </div>
                     <div id="review{{ review.id }}">
@@ -87,7 +87,7 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
-                <h3>Leave a review:</h3>
+                <h3>Leave a review for this Anime entry:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form id="AnimeReviewForm" method="POST" style="margin-top: 1.3em;">
                     {{ anime_review_form | crispy }}

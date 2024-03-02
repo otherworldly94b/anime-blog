@@ -1,6 +1,7 @@
 const editButtons = document.getElementsByClassName("btn-edit");
 const reviewText = document.getElementById("id_body");
-const animeReviewForm = document.getElementById("animeReviewForm");
+const reviewRating = document.getElementById("id_stars");
+const AnimeReviewForm = document.getElementById("AnimeReviewForm");
 const submitButton = document.getElementById("submitButton");
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
@@ -22,9 +23,12 @@ for (let button of editButtons) {
     button.addEventListener("click", (e) => {
         let reviewId = e.target.getAttribute("data-review_id");
         let reviewContent = document.getElementById(`review${reviewId}`).innerText;
+        let reviewRating = document.getElementById(`starRatingId${reviewId}`).innerText;
         reviewText.value = reviewContent;
+        reviewRating.value = reviewContent;
+        console.log(reviewRating);
         submitButton.innerText = "Update";
-        animeReviewForm.setAttribute("action", `edit_review/${reviewId}`);
+        AnimeReviewForm.setAttribute("action", `edit_review/${reviewId}`);
     });
 }
 

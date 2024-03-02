@@ -102,22 +102,3 @@ def review_delete(request, slug, review_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own reviews!')
 
     return HttpResponseRedirect(reverse('anime_detail', args=[slug]))
-
-# class EditReviewView(UpdateView):
-#     model = Review
-#     form_class = AnimeReviewForm
-#     template_name = 'anime_detail.html'
-
-#     def get_success_url(self):
-#         slug = self.kwargs['slug']
-#         return reverse('anime_detail', args=[slug])
-
-#     def form_valid(self, form):
-#         form.instance.approved = False  # Set review approval to False
-#         return super().form_valid(form)  # Call the original form_valid method
-
-#     def get_object(self, queryset=None):
-#         slug = self.kwargs['slug']
-#         review_id = self.kwargs['review_id']
-#         review = get_object_or_404(Review, pk=review_id, anime__slug=slug)  # Ensure review belongs to the anime
-#         return review
