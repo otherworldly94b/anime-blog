@@ -1,6 +1,8 @@
 # Django Anime Blog
 
-This project is a Django-based web application for anime enthusiasts to share their thoughts and experiences.
+This project is a Django-based web application for anime enthusiasts to share their thoughts and experiences based on the Blogs and Anime entries I add.
+
+[Anilink Live Project Link](https://django-anime-blog-220e5f361309.herokuapp.com/)
 
 ## Features
 
@@ -49,7 +51,7 @@ This project can be deployed on various cloud platforms. Here are specific instr
 3. **Requirements:** Create a `requirements.txt` file listing all your project dependencies. Heroku will install them automatically during deployment.
 4. **Configuration:** Set environment variables for any sensitive information like database credentials. Heroku provides ways to manage these securely.
 5. **Procfile:** Create a `Procfile` file specifying the command to run your Django application. A simple example: `web: gunicorn myproject.wsgi:application --log-file -`.
-6. **Deploy:** Once everything is set up, run `heroku deploy` to deploy your application to Heroku.
+6. **Deploy:** Once everything is set up, run `heroku deploy` to deploy your application to Heroku or log in to your Heroku Dashboard and manually Deploy Branch from the Deploy tab.
 
 **Note:** These are general guidelines. Refer to Heroku's documentation for the latest and most accurate instructions.
 
@@ -59,7 +61,7 @@ This project can be deployed on various cloud platforms. Here are specific instr
 - Icon set used: [Link to Icon Set License Here] (if applicable).
 - Inspiration for color scheme: [Anime Image Source Link Here].
 
-**Please note:**
+**Note to self:**
 - Replace bracketed text with actual links and screenshots.
 - Add any additional credits for code or resources used.
 
