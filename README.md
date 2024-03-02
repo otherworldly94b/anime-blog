@@ -4,18 +4,20 @@ This project is a Django-based web application for anime enthusiasts to share th
 
 [Anilink Live Project Link](https://django-anime-blog-220e5f361309.herokuapp.com/)
 
+![Insert Devices Screenshot Here]
+
 ## Features
 
 ### Content Management:
-- Admin/Owner can post blog entries and reviews for anime they've seen (Screenshot Here).
-- Registered users can leave comments on blog posts and reviews (Screenshot Here).
+- Admin/Owner can post blog entries and reviews for anime they've seen. This can be done from the Django Admin interface ![Insert Django Admin Screenshots Here].
+- Registered users can leave comments on blog posts and reviews ![Insert Comment and Review add Screenshot Here].
 
 ### User Management:
-- User registration, login, and logout functionality (Screenshot Here).
+- User registration, login, and logout functionality ![Insert Reg, login and Log out Screenshot Here].
 
 ### Interactions:
 - Users can edit and delete their own comments and reviews (Screenshot Here).
-- Confirmation modal appears before deletion for safety (Screenshot Here).
+- Confirmation modal appears before deletion for safety and good UX (Screenshot Here).
 
 ### Informational Pages:
 - Dedicated "About Me" page for the blog owner (Screenshot Here).

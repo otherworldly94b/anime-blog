@@ -22,7 +22,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #34312A;
 }
 
 .main-bg {
@@ -32,6 +32,10 @@ body {
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-img-top {
+    width: 75%;
 }
 
 .image-container {
