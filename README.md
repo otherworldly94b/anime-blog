@@ -46,7 +46,7 @@ This project is a Django-based web application for anime enthusiasts to share th
 ### Informational Pages:
 - Dedicated "About Me" page for the blog owner.
 
-![about me page](image-2.png)
+![about me page](static/images/about_me_page.PNG)
 
 ### Design:
 - The color scheme is inspired by a specific anime image featuring a group of heroes.
