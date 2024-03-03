@@ -59,11 +59,13 @@ This project is a Django-based web application for anime enthusiasts to share th
 - **Backend:** Python, Django Framework
 - **Frontend:** HTML, CSS, Javascript
 - **Testing:** 
-  - Lighthouse ![Insert Lighthouse Screenshot Here]
+  - Lighthouse:
+  
+    ![lighthouse validation](static/images/lighthouse_about_me_page.PNG)
+    ![lighthouse validation](static/images/lighthouse_home_page.PNG)
+    ![lighthouse validation](static/images/lighthouse_reviews_page.PNG)
 
-
-
-  - Pep8 - Too many files to upload but all the ones I edited came out with this:
+  - Pep8: - Too many files to upload but all the ones I edited came out with this:
 
     ![pep8 validation](static/images/python_validation_screenshot.PNG)
     Next time I will be using code to automate pep8 validation.
