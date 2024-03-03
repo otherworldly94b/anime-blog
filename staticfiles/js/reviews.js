@@ -26,7 +26,6 @@ for (let button of editButtons) {
         let reviewRating = document.getElementById(`starRatingId${reviewId}`).innerText;
         reviewText.value = reviewContent;
         reviewRating.value = reviewContent;
-        console.log(reviewRating);
         submitButton.innerText = "Update";
         AnimeReviewForm.setAttribute("action", `edit_review/${reviewId}`);
     });

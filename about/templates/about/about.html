@@ -18,9 +18,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col text-right">
+        <div class="col text-end">
           <!-- Updated on field goes in here -->
-    
           <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
@@ -36,8 +35,8 @@
             <!-- add your form here. Your submit button should 
                                 have the classes of btn, btn-secondary -->
             <form method="post">
-              {{ collaborate_form | crispy }}
               {% csrf_token %}
+              {{ collaborate_form | crispy }}
               <button class="btn btn-secondary" type="submit">Submit</button>
             </form>
         </div>

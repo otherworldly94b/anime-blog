@@ -5,17 +5,20 @@ from .forms import CollaborateForm
 class TestCollaborateForm(TestCase):
 
     def test_form_is_valid(self):
-        """ Test for all fields"""
+        """
+        Test if form is valid when all fields are provided.
+        """
         form = CollaborateForm({
             'name': 'Andreas',
             'email': 'test@test.com',
             'message': 'Hello!'
         })
         self.assertTrue(form.is_valid(), msg="Form is not valid")
-        
-        
+
     def test_name_is_required(self):
-        """Test for the 'name' field"""
+        """
+        Test if form is invalid when the 'name' field is empty.
+        """
         form = CollaborateForm({
             'name': '',
             'email': 'test@test.com',
@@ -26,9 +29,10 @@ class TestCollaborateForm(TestCase):
             msg="Name was not provided, but the form is valid"
         )
 
-
     def test_email_is_required(self):
-        """Test for the 'email' field"""
+        """
+        Test if form is invalid when the 'email' field is empty.
+        """
         form = CollaborateForm({
             'name': 'Matt',
             'email': '',
@@ -39,9 +43,10 @@ class TestCollaborateForm(TestCase):
             msg="Email was not provided, but the form is valid"
         )
 
-
     def test_message_is_required(self):
-        """Test for the 'message' field"""
+        """
+        Test if form is invalid when the 'message' field is empty.
+        """
         form = CollaborateForm({
             'name': 'Matt',
             'email': 'test@test.com',

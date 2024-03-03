@@ -4,6 +4,7 @@ from django.test import TestCase
 from .forms import CommentForm
 from .models import Post
 
+
 class TestBlogViews(TestCase):
 
     def setUp(self):
@@ -17,7 +18,6 @@ class TestBlogViews(TestCase):
                          content="Blog content", status=1)
         self.post.save()
 
-
     def test_render_post_detail_page_with_comment_form(self):
         response = self.client.get(reverse(
             'post_detail', args=['blog-title']))
@@ -26,8 +26,7 @@ class TestBlogViews(TestCase):
         self.assertIn(b"Blog content", response.content)
         self.assertIsInstance(
             response.context['comment_form'], CommentForm)
-        
-        
+
     def test_successful_comment_submission(self):
         """Test for posting a comment on a post"""
         self.client.login(
@@ -42,8 +41,7 @@ class TestBlogViews(TestCase):
             b'Comment submitted and awaiting approval',
             response.content
         )
-        
-        
+
     def test_successful_collaboration_request_submission(self):
         """Test for a user requesting a collaboration"""
         post_data = {
@@ -54,4 +52,6 @@ class TestBlogViews(TestCase):
         response = self.client.post(reverse('about'), post_data)
         self.assertEqual(response.status_code, 200)
         self.assertIn(
-            b'Collaboration request received! I endeavour to respond within 2 working days.', response.content)
+            b'Collaboration request received! I aim to reply within 48 hours.',
+            response.content,
+        )

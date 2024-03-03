@@ -1,16 +1,16 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #f9fafc;
 }
 
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #4a4a4f;
 }
 
 .red-i {
-    color: #ED071F;
+    color: #ed071f;
 }
 
 .thin {
@@ -22,11 +22,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #34312A;
+    background-color: #34312a;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #f9fafc;
 }
 
 .card {
@@ -71,7 +71,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #35356F;
+    background-color: #35356f;
     color: white;
     position: relative;
 }
@@ -81,7 +81,7 @@ body {
     overflow: hidden;
 }
 
-.masthead-image:after {
+.masthead-image::after {
     content: "";
     position: absolute;
     top: 0;
@@ -106,7 +106,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #ED071F;
+    color: #ed071f;
 }
 
 .post-title {
@@ -143,19 +143,19 @@ body {
 }
 
 .btn-like {
-    color: #ED071F;
+    color: #ed071f;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #ED071F;
+    background: #ed071f;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #ED071F;
+    color: #ed071f;
     background: transparent;
     border: none;
 }

@@ -1,16 +1,11 @@
-from .models import Review 
-from django import forms 
+from django import forms
+from .models import Review
 
 
 class AnimeReviewForm(forms.ModelForm):
-
+    """
+    Form for creating or updating anime reviews.
+    """
     class Meta:
         model = Review
-        fields = ["stars","body"]
-        
-    # def __init__(self, *args, **kwargs):
-    #     review = kwargs.pop('review', None)  # Retrieve optional review object
-    #     super().__init__(*args, **kwargs)
-    #     if review:
-    #         self.initial['stars'] = review.stars
-    #         print(f"Initial stars: {self.initial['stars']}")  # Add for debugging
+        fields = ["stars", "body"]

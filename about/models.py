@@ -2,9 +2,6 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 
-# Create your models here.
-
-
 class About(models.Model):
     """
     Stores a single about me text
@@ -13,10 +10,11 @@ class About(models.Model):
     profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    
-
 
     def __str__(self):
+        """
+        Returns a string representation of the About object.
+        """
         return self.title
 
 
@@ -30,4 +28,7 @@ class CollaborateRequest(models.Model):
     read = models.BooleanField(default=False)
 
     def __str__(self):
+        """
+        Returns a string representation of the CollaborateRequest object.
+        """
         return f"Collaboration request from {self.name}"
