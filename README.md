@@ -60,7 +60,7 @@ This project is a Django-based web application for anime enthusiasts to share th
 - **Frontend:** HTML, CSS, Javascript
 - **Testing:** 
   - Lighthouse:
-  
+
     ![lighthouse validation](static/images/lighthouse_about_me_page.PNG)
     ![lighthouse validation](static/images/lighthouse_home_page.PNG)
     ![lighthouse validation](static/images/lighthouse_reviews_page.PNG)
@@ -100,8 +100,10 @@ The application has undergone a rigorous testing process:
 - **Manual Testing:** Extensive manual testing involved clicking through all functionalities, verifying form submissions, and confirming page loads.
 - **Additional Manual Testing:**
   - Test if registration email is sent successfully.
+  - Test if form is valid by using all available different inputs (wrong credentials, characters, numbers)
   - Try logging in with invalid credentials.
   - Verify Edit/Delete functionality for blog post comments and anime reviews.
+  - Test if messages appear to inform the user of their actions.
   - Test image uploads for blog posts and anime entries.
   - Check if pagination works correctly on listings.
 
